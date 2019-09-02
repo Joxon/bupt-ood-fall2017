@@ -1,0 +1,491 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 1
+			"$rowCount": 4
+			"margin": new java.awt.Insets( 10, 0, 10, 0 )
+		} ) {
+			name: "this"
+			"modal": true
+			"title": "Strategy Management"
+			"background": new java.awt.Color( 204, 255, 204, 255 )
+			"minimumSize": new java.awt.Dimension( 800, 34 )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane"
+				"minimumSize": new java.awt.Dimension( 400, 27 )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table"
+					"maximumSize": new java.awt.Dimension( 2147483647, 32 )
+					"minimumSize": new java.awt.Dimension( 400, 32 )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tableMouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"fill": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+				"$columnCount": 2
+				"$rowCount": 1
+				"hGap": 0
+				"vGap": 0
+			} ) {
+				name: "panelAdd"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAddSS"
+					"text": "Add Simple Strategy"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonAddSSActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"fill": 1
+					"preferredSize": new java.awt.Dimension( 200, 1 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAddCS"
+					"text": "Add Composite Strategy"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonAddCSActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"fill": 1
+					"preferredSize": new java.awt.Dimension( 200, 1 )
+					"column": 1
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+				"$columnCount": 3
+				"$rowCount": 5
+			} ) {
+				name: "panelSS"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSS"
+					"text": "Simple Strategies"
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSSName"
+					"text": "Name"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 1
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldSSName"
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"fill": 1
+					"minimumSize": new java.awt.Dimension( 200, 1 )
+					"row": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSSType"
+					"text": "Type"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 2
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxSSType"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 2
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonSSUpdate"
+					"text": "Update"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonSSUpdateActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 2
+					"row": 2
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSSBT"
+					"text": "Book type"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 3
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxSSBT"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 3
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonSSDelete"
+					"text": "Delete"
+					"background": new java.awt.Color( 255, 0, 51, 255 )
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonSSDeleteActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 2
+					"row": 3
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelSSDiscount"
+					"text": "Discount"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 4
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinnerSSDiscount"
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 4
+					"fill": 1
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+				"$columnCount": 3
+				"$rowCount": 5
+			} ) {
+				name: "panelCS"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelCS"
+					"text": "Composite Strategies"
+					"background": new java.awt.Color( 204, 255, 204, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelCSName"
+					"text": "Name"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 1
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldCSName"
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"fill": 1
+					"minimumSize": &Dimension0 new java.awt.Dimension( 200, 1 )
+					"row": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelCSST1"
+					"text": "Strategy type 1"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 2
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxCSST1"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 2
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonCSUpdate"
+					"text": "Update"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonCSUpdateActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 2
+					"row": 2
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelCSST2"
+					"text": "Strategy type 2"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 3
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxCSST2"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 3
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonCSDelete"
+					"text": "Delete"
+					"foreground": new javax.swing.plaf.ColorUIResource( 238, 238, 238 )
+					"background": new java.awt.Color( 255, 0, 0, 255 )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonCSDeleteActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 2
+					"row": 3
+					"fill": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelCSBT"
+					"text": "Book type"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"row": 4
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBoxCSBT"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"row": 4
+					"fill": 1
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 3
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 408, 451 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 2
+			"$rowCount": 5
+			"hGap": 0
+			"vGap": 0
+		} ) {
+			name: "dialogAddSS"
+			"title": "Adding Simple Strategy"
+			"name": "dialogAddSS"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelSSName2"
+				"text": "Name"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldSSName2"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelSSType2"
+				"text": "Type"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 1
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxSSType2"
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 1
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelSSBT2"
+				"text": "Book type"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 2
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxSSBT2"
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 2
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelSSDiscount2"
+				"text": "Discount"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 3
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinnerSSDiscount2"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 3
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonAddSSConfirm"
+				"text": "Confirm"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonAddSSConfirmActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 4
+				"fill": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 470 )
+			"size": new java.awt.Dimension( 403, 241 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 2
+			"$rowCount": 5
+		} ) {
+			name: "dialogAddCS"
+			"title": "Adding Composite Strategy"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelCSST12"
+				"text": "Strategy type 1"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 1
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxCSST12"
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 1
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelCSBT2"
+				"text": "Book type"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 3
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxCSST22"
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 2
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxCSBT2"
+				auxiliary() {
+					"JavaCodeGenerator.typeParameters": "String"
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 3
+				"fill": 1
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldCSName2"
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"fill": 1
+				"minimumSize": #Dimension0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelCSST22"
+				"text": "Strategy type 2"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelCSName2"
+				"text": "Name"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonAddCSConfirm"
+				"text": "Confirm"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonAddCSConfirmActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"column": 1
+				"row": 4
+				"fill": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 744 )
+			"size": new java.awt.Dimension( 398, 221 )
+		} )
+	}
+}

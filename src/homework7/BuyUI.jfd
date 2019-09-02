@@ -1,0 +1,120 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 1
+			"$rowCount": 5
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 400, 300 )
+			"title": "Browse Catalog & Buy"
+			"resizable": false
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPaneForTable"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tableBookCat"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tableBookCatMouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "center:default:grow, labelcompgap, left:max(min;100px):grow"
+				"$rowSpecs": "default, linegap, default"
+			} ) {
+				name: "panelInput"
+				"preferredSize": new java.awt.Dimension( 200, 68 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelISBN"
+					"text": "ISBN"
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 1
+					"gridY": 1
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textFieldISBN"
+					"minimumSize": new java.awt.Dimension( 200, 30 )
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 3
+					"gridY": 1
+					"hAlign": sfield com.jgoodies.forms.layout.CellConstraints FILL
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelAmount"
+					"text": "Amount"
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 1
+					"gridY": 3
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinnerAmount"
+					"minimumSize": new java.awt.Dimension( 200, 32 )
+				}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+					"gridX": 3
+					"gridY": 3
+					"hAlign": sfield com.jgoodies.forms.layout.CellConstraints FILL
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"rowSpan": 2
+				"row": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+				"$columnCount": 4
+				"$rowCount": 1
+				"hGap": 0
+				"vGap": 0
+			} ) {
+				name: "panelButtons"
+				"preferredSize": new java.awt.Dimension( 0, 40 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonViewCar"
+					"text": "View Car"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonViewCarActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"hSizePolicy": 0
+					"useParentLayout": false
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonEmptyCar"
+					"text": "Empty Car"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonEmptyCarActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 1
+					"hSizePolicy": 0
+				} )
+				add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+					name: "hSpacerBottom"
+					"minimumSize": new java.awt.Dimension( 100, 12 )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 2
+					"hSizePolicy": 7
+					"preferredSize": new java.awt.Dimension( 100, 1 )
+					"useParentLayout": false
+					"minimumSize": new java.awt.Dimension( 50, 1 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonAddToCar"
+					"text": "Add to car"
+					"minimumSize": new java.awt.Dimension( 200, 40 )
+					"maximumSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"background": sfield java.awt.Color orange
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"borderPainted": false
+					"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 5, false )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonAddToCarActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+					"column": 3
+					"hSizePolicy": 1
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"row": 4
+				"useParentLayout": false
+				"hSizePolicy": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 394, 355 )
+		} )
+	}
+}
